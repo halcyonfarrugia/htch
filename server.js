@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 const app = express();
 
 app.use(cors({
-    origin: "http://localhost:3000",
+    origin: process.env.CLIENT_URL,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true, 
 }))
@@ -31,4 +31,4 @@ app.use('/api/product', require('./routes/product'))
 app.use('/api/order', require('./routes/order'))
 app.use('/api/user', require('./routes/user'))
 
-app.listen(process.env.PORT, () => console.log(`Server listening at port ${process.env.PORT}`))
+app.listen(process.env.PORT, () => console.log(`Server listening at ${process.env.PORT}`))
