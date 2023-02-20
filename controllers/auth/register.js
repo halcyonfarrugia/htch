@@ -1,6 +1,6 @@
 const User = require('../../models/User');
 const UserVerification = require('../../models/UserVerification')
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const nodemailer = require('nodemailer')
 
